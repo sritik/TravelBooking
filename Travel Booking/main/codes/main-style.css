@@ -1,0 +1,584 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}
+.banner{
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+	background-image: url(bg3.jpg),url(mask.jpg);
+	background-blend-mode: screen;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+header .logo{
+	position: relative;
+	color: #015b75;
+	text-decoration: none;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+header .toggle{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-image: url(menu.png);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+header .toggle.active{
+	background-image: url(close.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.sci{
+	position: absolute;
+	bottom: 40px;
+	right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sci li{
+	list-style: none;
+}
+.sci li a {
+	display: inline-block;
+	text-decoration: none;
+	transform: scale(0.6);
+}
+.sci li a i{
+	color:#015b75;
+	font-size:50px;
+}
+.sci li a i:hover{
+	color: #ff286f;
+}
+.content{
+	padding: 50px;
+}
+.content h2{
+	font-family: 'Kaushan Script',serif;
+	font-size: 9em;
+	line-height: 1em;
+	color: #015b75;
+}
+.navigation{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s;
+}
+.navigation.active{
+	opacity: 1;
+	visibility: visible;
+}
+.navigation ul li{
+	list-style: none;
+
+}
+.navigation ul li a{
+	display: inline-block;
+	color: #015b75;
+	font-size: 2em;
+	text-decoration: none;
+	font-weight: 300;
+}
+.navigation ul li a:hover{
+	color: #ff286f;
+
+}
+
+
+
+/*------About Us Page Styling------*/
+.aboutus{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(aboutus.jpg);
+	height:100vh;
+	width: 100%;
+}
+.aboutus .main-title h1{
+	font-family: 'Kaushan Script',serif;
+	text-align: center;
+	color: #ff286f;
+	font-size: 5em;
+	font-weight: 500;
+	margin-top: 20px;
+	letter-spacing: 5px;
+	word-spacing: 5px;
+}
+.aboutus .main-title .info p{ 
+	margin-top: 35px;
+	letter-spacing: 2px;
+	word-spacing: 1px;
+	font-weight: 200;
+	color: #cecece;
+}
+.aboutus1 .card{
+	width: 100%;
+}
+.aboutus1 .card-body{
+	background-color: #015b75;
+}
+.aboutus1 .heading{
+	font-family: 'Kaushan Script',serif;
+	font-size: 5em;
+	color: rgb(200, 150, 0);
+}
+.aboutus1 .profiles{
+	display: flex;;
+	justify-content: space-around;
+	margin: 20px 80px;
+}
+.aboutus1 .profile{
+	flex-basis: 260px;
+}
+.aboutus1 .profile .profile-img{
+	height: 260px;
+	width: 260px;
+	border-radius: 50%;
+	filter: grayscale(100%);
+	cursor: pointer;
+	transition: 400ms;
+}
+.aboutus1 .profile:hover .profile-img{
+	filter: grayscale(0);
+}
+.aboutus1 .user-name{
+	margin-top: 30px;
+	font-size: 35px;
+	font-weight: 300;
+	color: #111;
+}
+.aboutus1 .profile h5{
+	font-size: 18px;
+	font-weight: 100;
+	letter-spacing: 3px;
+	color:rgb(200, 150, 0);
+}
+.aboutus1 .profile p{
+	font-size: 16px;
+	margin-top: 20px;
+	text-align: justify;
+	color: #111;
+}
+@media only screen and (max-width: 1150px){
+	.profiles{
+		flex-direction: column;
+	}
+	.profile{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.profile p{
+		text-align: center;
+		margin: 20px 60px 80px 60px;
+	}
+}
+@media only screen and (max-width: 900px){
+	.heading{
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+	.heading-span{
+		font-size: 15px;
+	}
+	.profiles{
+		margin: 20px 0;
+	}
+	.profile p{
+		margin: 20px 10px 80px 10px;
+	}
+}
+
+
+/*------Blog  Page Styling------*/
+.blog{
+	background-image: url(blogbg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+.blog .container h1{
+	font-family: 'Kaushan Script',serif;
+	font-size: 5em;
+	color: rgb(23 216 131);
+
+}
+.blog .single-blog{
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 25px;
+	background-color: #fff;
+}
+.blog .single-blog img{
+	width: 100%;
+	height: 400px;
+}
+.blog .blog-meta{
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+.blog .single-blog span{
+	float: right;
+	font-size: 12px;
+	color: cornflowerblue;
+}
+.blog .blog-text{
+	font-size: 14px;
+	text-align: justify;
+}
+.blog .single-blog h2{
+	margin-top: 10px;
+	font-size: 16px;
+	color: #007bff;
+}
+.blog .single-blog h2 a{
+	text-decoration: none;
+}
+.blog .read-more-btn
+{
+	background-image: linear-gradient(to right, #1c03b5, #5c8bef);
+	padding: 5px 12px 8px;
+	border-radius: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #fff;
+	border: none!important;
+}
+.blog .read-more-btn:hover{
+		background-image: linear-gradient(to right, #006417, #00b128);
+		text-decoration: none;
+
+}
+
+
+
+/*------Booking Page Styling------*/
+.booking{
+	background-image: url(bookingbg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+}
+.booking-form {
+    padding: 10%;
+    text-align: center;
+    align-items: center;
+}
+.booking-main-title h2{
+	font-family: 'Kaushan Script',serif;
+	font-size: 5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.booking-main-title p{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #015b75;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+
+ }
+.form-group {
+    margin-bottom: 15px;
+}
+.booking-form .form-control {
+    box-shadow: none;
+    border-color: initial;
+    outline-color: initial;
+    background-image: initial;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.booking-form .btn-custom {
+    border: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #015b75;
+}
+.booking-form .btn-custom:hover{
+	background-color: #ff286f;
+	border: 1px solid #ddd;
+	border-color: #ff286f;
+ }
+.booking-form .cobooking-main-title p{
+	margin-top: 30px;
+}
+.booking-form .cobooking-main-title h2{
+	padding-top: 20px;
+	color: #ff286f;
+}
+
+
+
+
+/*------Gallery  Page Styling------*/
+.gallery{ 
+	width: 100%;
+	background-color: #111;
+}
+.gallery .container{
+	width: 100%;
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template: " 1fr 1fr 1fr 1fr 1fr" 33.33vh
+					" 1fr 1fr 1fr 1fr 1fr" 33.33vh
+					" 1fr 1fr 1fr 1fr 1fr" 33.33vh;
+	grid-gap: 5px;
+}
+.gallery .container .box{
+	position: relative;
+	background-color: #ccc;
+}
+.gallery .container .box.a{
+	grid-row: span 2;
+}
+.gallery .container .box.b,
+.gallery .container .box.f,
+.gallery .container .box.h,
+.gallery .container .box.j{
+	grid-column: span 2;
+}
+.gallery .container .box img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+@media (max-width: 991px)
+{ 
+	.gallery .container { 
+		grid-template: " 1fr 1fr 1fr " 200px
+					   " 1fr 1fr 1fr " 200px
+					   " 1fr 1fr 1fr " 200px
+					   " 1fr 1fr 1fr " 200px
+					   " 1fr 1fr 1fr " 200px;
+	 }
+}
+@media (max-width: 768px)
+{ 
+	.gallery .container { 
+		grid-template: " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px
+					   " 1fr 1fr " 200px;
+	 }
+	 .gallery .container .box.h{ 
+	 	grid-column: span 1;
+	 }
+}
+
+/*------Contact Us Page Styling------*/
+.contactus{
+	background-color: #111;
+    position: relative;
+    padding: 100px 0;
+}
+.contact-info{
+	padding: 2%;
+}
+.contact-info .contact-image{
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+}
+.contactus .google-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.contactus .google-map iframe {
+    width: 100%;
+    height: 100%;
+}
+.contact-box{
+	background-color: #e5e5e5;
+	padding: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+.contact-information{
+	margin-top: 40px;
+	text-align: center;
+}
+.contact-information .contact-info-single {
+	position: relative;
+    padding-left: 70px;
+    margin-bottom: 30px;
+}
+.contact-information .contact-info-single .icon-box {
+    color: #015b75;
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    left: 0;
+    top: 1px;
+    font-size: 42px;
+}
+.contact-information .contact-info-single p {
+    color: #015b75;
+    font-size: 20px;
+	padding-left: 30px;
+}
+.contact-information .contact-info-single .icon-box i{
+	color:#ff286f;
+	font-size:50px;
+	margin-left: 30px;
+}
+.contact-form {
+    padding: 10%;
+    text-align: center;
+}
+.contactus-main-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contactus-main-title p {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #015b75;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    margin-bottom: 0;
+
+ }
+.form-group {
+    margin-bottom: 15px;
+}
+.contact-form .form-control {
+    box-shadow: none;
+    border-color: initial;
+    outline-color: initial;
+    background-image: initial;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.contact-form .btn-custom {
+    border: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #015b75;
+}
+.contact-form .btn-custom:hover{
+	background-color: #ff286f;
+	border: 1px solid #ddd;
+	border-color: #ff286f;
+ }
+.contact-form .contactus-main-title p{
+	margin-top: 30px;
+}
+.contact-form .contactus-main-title h2{
+	padding-top: 20px;
+	color: #ff286f;
+}
+
+/*------Footer Styling------*/
+.siteinfo{
+	padding-top: 50px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.siteinfo p{
+	text-decoration: none;
+	color:#fff;
+}
+.siteinfo a{
+	text-decoration: none;
+	color:#fff;
+}
+.footer-design{
+	background-color:#111;
+	height: 250px;
+	width: 100%;
+}
+.footer-menu{
+	text-align: center;
+}
+.footer-menu li a{
+	text-decoration: none;
+	color:#fff;
+	padding-top: 10px;
+}
+.footer-menu li a:hover{
+	color: #007bff;
+}
+.footer-social{
+	text-align: center;
+}
+.footer-social a{
+	
+	color: #015b75;
+	width: 40px;
+	height: 40px;
+	padding: 20px;
+	line-height: 40px;
+	border-radius: 50% ;
+	text-shadow:1px 1px 2px rgba(0,0,0,0.5);
+	font-size: 16px;
+	transition: 0.5s all;
+
+}
+.footer-social a:hover{
+	
+	color: #ff286f;
+}
